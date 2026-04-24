@@ -1,0 +1,193 @@
+/*
+ * Embers · GitHub Pages shared stylesheet
+ *
+ * Mirrors the in-app design tokens (rose / cream / chestnut) so the
+ * hosted legal pages feel like an extension of the iOS app, not a
+ * random boilerplate. Single file keeps the whole site fast — no JS,
+ * no external fonts beyond the system stack.
+ */
+
+:root {
+  --rose:           #FF8FA3;
+  --rose-deep:      #E16B82;
+  --blush:          #F5B5C1;
+  --petal:          #FFEAEE;
+  --cream:          #FFF7F3;
+  --chestnut:       #6B4C57;
+  --muted:          #947E85;
+  --hairline:       rgba(0, 0, 0, 0.08);
+  --surface:        #ffffff;
+  --radius-sm:      8px;
+  --radius-md:      16px;
+  --radius-lg:      28px;
+  --shadow-sm:      0 4px 12px rgba(107, 76, 87, 0.08);
+  --shadow-md:      0 10px 28px rgba(107, 76, 87, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded",
+               "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue",
+               Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--chestnut);
+  background: linear-gradient(180deg, var(--cream) 0%, #ffffff 60%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--rose-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+a:hover { border-bottom-color: var(--rose-deep); }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+/* --- Header / brand --- */
+
+header.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 36px;
+}
+header.brand .logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--rose-deep), var(--blush));
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: var(--shadow-sm);
+}
+header.brand h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+header.brand p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* --- Typography --- */
+
+h1.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+.page-meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 36px 0 8px;
+  letter-spacing: -0.01em;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 24px 0 6px;
+}
+p { margin: 0 0 14px; }
+ul, ol { padding-left: 22px; margin: 0 0 14px; }
+li { margin-bottom: 4px; }
+
+strong { color: var(--chestnut); }
+
+/* --- Cards / callouts --- */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--hairline);
+  margin-bottom: 20px;
+}
+.card.cta {
+  background: linear-gradient(135deg, #fff 0%, var(--petal) 140%);
+}
+
+.email-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--chestnut);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.email-chip:hover { border-bottom: none; color: #ffffff; opacity: 0.92; }
+
+/* --- Index page grid --- */
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+@media (min-width: 680px) {
+  .doc-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.doc-card {
+  display: block;
+  padding: 22px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--hairline);
+  color: var(--chestnut);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.doc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--hairline);
+}
+.doc-card .emoji { font-size: 28px; display: block; margin-bottom: 10px; }
+.doc-card h3 { margin: 0 0 4px; font-size: 17px; }
+.doc-card p  { margin: 0; font-size: 13px; color: var(--muted); }
+
+/* --- Footer --- */
+
+footer {
+  margin-top: 72px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: space-between;
+}
+footer a { color: var(--muted); }
+footer a:hover { color: var(--chestnut); border-bottom-color: var(--chestnut); }

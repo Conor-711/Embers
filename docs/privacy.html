@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Embers · Privacy Policy</title>
+  <meta name="description" content="Embers Privacy Policy — what we collect, and (mostly) what we don't." />
+  <meta name="theme-color" content="#FF8FA3" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <main>
+    <header class="brand">
+      <a href="./index.html" class="logo" aria-label="Embers home">E</a>
+      <div>
+        <h1>Embers</h1>
+        <p><a href="./index.html">← All documents</a></p>
+      </div>
+    </header>
+
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-meta">Effective date: April 24, 2026 · Last updated: April 24, 2026</p>
+
+    <div class="card">
+      <p>Embers is built for two people — not for advertisers. This policy explains what data we collect, why we collect it, and what rights you have. Our default is <strong>to collect as little as possible</strong>.</p>
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>Embers (the <strong>"App"</strong>) is operated by the Embers team. Contact us at <a href="mailto:zfy3712z@gmail.com">zfy3712z@gmail.com</a>.</p>
+
+    <h2>2. What We Collect</h2>
+
+    <h3>2.1 Account &amp; profile data</h3>
+    <ul>
+      <li>Your Sign in with Apple / Google identifier (or email + hashed password for email sign-in).</li>
+      <li>Display name and profile photo you choose.</li>
+      <li>Couple pairing relationships (which account is paired with which).</li>
+    </ul>
+
+    <h3>2.2 Content you create</h3>
+    <ul>
+      <li>Stickies (drawings + captions), whispers (letters + optional photo / doodle), affection taps, mood shares, and memory reel entries that you and your partner send each other.</li>
+      <li>Stored encrypted-at-rest on our backend (Supabase + Apple CloudKit). Only you and your paired partner can read the content.</li>
+    </ul>
+
+    <h3>2.3 Device &amp; usage data</h3>
+    <ul>
+      <li>Anonymous APNs device token used to deliver push notifications.</li>
+      <li>App version, iOS version, device model, language, time-zone.</li>
+      <li>Product-analytics events (e.g. "sticky_sent", "paywall_viewed") via <strong>Mixpanel</strong>. We <strong>never</strong> send the text of your stickies, whispers, or captions to analytics — only structural metadata (length, whether a photo is attached, etc.). You can opt out in <strong>Settings → Analytics</strong>.</li>
+      <li>Subscription / purchase state from Apple's StoreKit (for entitlement checks).</li>
+    </ul>
+
+    <h3>2.4 What we do NOT collect</h3>
+    <p>We do not collect your precise location, your contacts, your calendar, your camera roll outside of what you explicitly attach, IDFA, your browsing history, or biometric data.</p>
+
+    <h2>3. How We Use Your Data</h2>
+    <ul>
+      <li>Deliver the Service — authenticate you, sync content between you and your partner, send push notifications.</li>
+      <li>Improve the Service — understand which features are used, diagnose bugs, make product decisions.</li>
+      <li>Process purchases and prevent fraud.</li>
+      <li>Communicate important updates (e.g. changes to this policy, security incidents).</li>
+    </ul>
+    <p>We <strong>do not</strong> sell your personal data. We do not use your content to train machine-learning models.</p>
+
+    <h2>4. Who Sees Your Data</h2>
+    <ul>
+      <li><strong>Your paired partner</strong> — by design. Anything you send them is theirs to read.</li>
+      <li><strong>Infrastructure processors</strong> — Apple (iCloud / CloudKit / APNs / Sign in with Apple / IAP), Google (OAuth only), Supabase (auth + database + storage), Mixpanel (anonymous analytics only). Each acts as a data processor on our behalf under written agreements.</li>
+      <li><strong>Nobody else</strong>, except when required by law (valid subpoena, court order) or to protect the safety of our users.</li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li>Your account and the content you send are retained until you delete them.</li>
+      <li>Deleting an individual sticky, whisper, or the whole account removes the data from our active systems. Backups are rotated within 30 days.</li>
+      <li>Deleted accounts cannot be recovered — you'll need to start fresh.</li>
+    </ul>
+
+    <h2>6. Your Rights</h2>
+    <p>Depending on where you live, you may have rights to:</p>
+    <ul>
+      <li><strong>Access</strong> a copy of the personal data we hold about you.</li>
+      <li><strong>Correct</strong> inaccurate data (most profile fields are editable in <strong>Settings</strong>).</li>
+      <li><strong>Delete</strong> your account and data from <strong>Settings → Delete account</strong>, or by emailing us.</li>
+      <li><strong>Port</strong> a copy of your content to another service.</li>
+      <li><strong>Object</strong> to certain processing (e.g. analytics) — toggle it off in Settings.</li>
+      <li><strong>Withdraw consent</strong> for any processing that relies on consent, without affecting past lawful processing.</li>
+    </ul>
+    <p>Email <a href="mailto:zfy3712z@gmail.com">zfy3712z@gmail.com</a> to exercise any of these rights. We'll respond within 30 days.</p>
+
+    <h2>7. Children</h2>
+    <p>Embers is <strong>not directed to children under 13</strong>. We do not knowingly collect data from children under 13. If you believe a child has created an account, email us and we'll delete it.</p>
+
+    <h2>8. International Transfers</h2>
+    <p>Your data may be processed in the United States or other countries where our infrastructure providers (Apple, Supabase, Google, Mixpanel) operate. Where required, we use standard contractual clauses or equivalent safeguards to protect your data during transfer.</p>
+
+    <h2>9. Security</h2>
+    <p>We use TLS for data in transit, encryption-at-rest on our databases, per-user access control at the database layer (Supabase Row-Level Security), and Apple's end-to-end protections for iCloud data. No system is 100% secure — if we ever learn of a breach that affects you, we'll notify you without undue delay.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>If we make material changes, we'll notify you in the App or by email at least <strong>7 days</strong> before they take effect. The "Last updated" date at the top of this page always reflects the current version.</p>
+
+    <h2>11. Contact</h2>
+    <p>Privacy questions, requests, or complaints: <a href="mailto:zfy3712z@gmail.com">zfy3712z@gmail.com</a>.</p>
+
+    <footer>
+      <span>© <span id="year"></span> Embers</span>
+      <span>
+        <a href="./terms.html">Terms</a> ·
+        <a href="./privacy.html">Privacy</a> ·
+        <a href="./support.html">Support</a>
+      </span>
+    </footer>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
